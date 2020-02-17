@@ -1,0 +1,39 @@
+<HTML>
+	<head>
+		<?php
+			require("config.php");
+			echo "\n";
+			echo "		<title>" . $pageTitle . "</title>\n";
+			echo "		<meta name='title' content='" . $pageTitle . "' />\n";
+		?>
+		
+		<link rel="icon" href="<?php echo $homeDir ?>/favicon.ico" type="image/x-icon" />
+		<link rel="StyleSheet" href="http://<?php echo $_SERVER["SERVER_NAME"] . $subFolder; ?>stylesheets/<?php echo $layout_theme; ?>.css" type="text/css" />
+	</head>
+	<body>
+	<div>
+		<div class="header">
+			<div class="image">
+				<span>NoAnomie</span>
+			</div>
+		</div>
+		<div class="body">
+			<div id="pageTitle">
+				<span>Select School</span>
+			</div>
+			<div id="pageBody">
+				<form>
+					<input type="submit" title="Create New School" value="" />
+					<input type="text" title="" value="" />
+					<input type="submit" title="Go to School" value="" />
+				</form>
+				
+			</div>
+		</div>
+		<div class="footer">
+			<?php echo $footerText ?>
+		</div>
+	</div>
+	</body>
+</HTML>
+<?php mysql_close($connect); ?>
